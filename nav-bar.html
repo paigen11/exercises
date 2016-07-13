@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css" media="screen">
+		ul{
+			/* Get rid of the stupid bullet points on the list items */
+			list-style: none;
+			/* set a background color */
+			background-color: #333;
+			/* force the children to send their height up to the parent */
+			overflow: hidden;
+			/* set a position of fixed so that, when the user scrolls, the nav bar stays visible */
+			position: fixed;
+			/* set the starting point for our nav bar */
+			top: 0px;
+			left: 0px;
+			/* now that it's fixed, it needs a set width */
+			width: 100%;
+			/* force the UL to start with 0 padding and 0 pixels so the browser doesn't interfere */
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.menu-item{
+			/* Put the list items next to each other */
+			float: left;
+			/* Set the font color to white */
+			color: white;
+			/* Set the padding */
+			padding: 14px 16px;
+		}
+		/* Target the element with both classes menu item and about */
+		.menu-item.about{
+			/* Set bg color to greenish */
+			background-color: #4caf50;
+			/* Float the element to the right of its parent */
+			float: right;
+		}
+
+		/* We need to set a hover background color */
+		.menu-item:hover{
+			background-color: #777;
+		}
+
+		#content{
+			width: 50%;
+			text-align: center;
+			margin: auto;
+			height: 150vh;
+			margin-top: 46px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<header>
+		<ul>
+			<li class="menu-item">Home</li>
+			<li class="menu-item">News</li>
+			<li class="menu-item">Contact</li>
+			<li class="menu-item about">About</li>
+
+		</ul>
+	</header>
+
+	<div id="content">
+	  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+
+</body>
+</html>

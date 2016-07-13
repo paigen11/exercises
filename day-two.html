@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pimp My Ride</title>
+
+	<style type="text/css" media="screen">
+		h1{
+			color: black;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.sky {
+			width: 100%;
+			height:56%;
+			top: 0px;
+			background-color: lightblue;
+			position: absolute;
+			z-index: -3;
+		}
+		.one {
+			height: 80px;
+			width: 80px;
+			background-color: black;
+			/* To make this a circle instead of a square, we can use border-radius */
+			border-radius: 50%;
+			position: absolute;
+			left: 33%;
+			top: 50%;
+		}
+
+		.two {
+			height: 80px;
+			width: 80px;
+			background-color: black;
+			/* To make this a circle instead of a square, we can use border-radius */
+			border-radius: 50%;
+			position: absolute;
+			left: 66%;
+			top: 50%;
+		}
+
+		.car_body {
+			height: 100px;
+			width: 65%;
+			position: absolute;
+			background-color: #ff0000; 
+			top: 40%;
+			left: 20%;
+			z-index: -1;
+		}
+
+		.hubcap_one {
+			height: 60px;
+			width: 60px;
+			background-color: lightgrey;
+			/* To make this a circle instead of a square, we can use border-radius */
+			border-radius: 50%;
+			position: absolute;
+			left: 33.65%;
+			top: 51.5%;
+		}
+
+		.hubcap_two {
+			height: 60px;
+			width: 60px;
+			background-color: lightgrey;
+			/* To make this a circle instead of a square, we can use border-radius */
+			border-radius: 50%;
+			position: absolute;
+			left: 66.65%;
+			top: 51.5%;
+		}
+
+		.car_top {
+			position: absolute;
+			border-bottom: 100px solid red;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			height: 0;
+			width: 300px;
+			top: 30%;
+			left: 40%;
+			border-radius: 10%;
+		}
+
+		.car_nose {
+			position: absolute;
+			top: 40%;
+			left: 14%;
+			width: 0;
+			height: 0;
+			border-bottom: 100px solid red;
+			border-left: 100px solid transparent;
+		}
+
+		.windows_one {
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-bottom: 100px lightgrey;
+			border-left: 100px solid transparent;
+			top: 30%;
+			left:40%;
+			z-index: 1;
+		}
+
+		.windows_two {
+			position: absolute;
+			width: 130px;
+			height: 70px;
+			top: 31%;
+			left: 44%;
+			background-color: lightgrey;
+		}
+
+		.windows_three {
+			position: absolute;
+			width: 130px;
+			height: 70px;
+			top: 31%;
+			left: 53%;
+			background-color: lightgrey;
+		}
+
+		#hood_ornament {
+		   margin: 50px 0;
+		   position: absolute;
+		   display: block;
+		   color: gold;
+		   width: 0px;
+		   height: 0px;
+		   border-right:  100px solid transparent;
+		   border-bottom: 70px  solid gold;
+		   border-left:   100px solid transparent;
+		   -moz-transform:    rotate(35deg);
+		   -webkit-transform: rotate(35deg);
+		   -ms-transform:     rotate(35deg);
+		   -o-transform:      rotate(35deg);
+		   top: 27%;
+		   left: 16%;
+		}
+		#hood_ornament:before {
+		   border-bottom: 80px solid gold;
+		   border-left: 30px solid transparent;
+		   border-right: 30px solid transparent;
+		   position: absolute;
+		   height: 0;
+		   width: 0;
+		   top: -45px;
+		   left: -65px;
+		   display: block;
+		   content: '';
+		   -webkit-transform: rotate(-35deg);
+		   -moz-transform:    rotate(-35deg);
+		   -ms-transform:     rotate(-35deg);
+		   -o-transform:      rotate(-35deg);
+
+		}
+		#hood_ornament:after {
+		   position: absolute;
+		   display: block;
+		   color: red;
+		   top: 3px;
+		   left: -105px;
+		   width: 0px;
+		   height: 0px;
+		   border-right: 100px solid transparent;
+		   border-bottom: 70px solid gold;
+		   border-left: 100px solid transparent;
+		   -webkit-transform: rotate(-70deg);
+		   -moz-transform:    rotate(-70deg);
+		   -ms-transform:     rotate(-70deg);
+		   -o-transform:      rotate(-70deg);
+		   content: '';
+		}
+
+		.street{
+			position: absolute;
+			width: 100%;
+			height: 15%;
+			background-color: darkslategrey;
+			top: 56%;
+			z-index: -2;
+		}
+
+		.grass_one{
+			position: absolute;
+			width: 100%;
+			height: 12%;
+			background-color: green;
+			top: 71%;
+		}
+
+		.grass_two{
+			position: absolute;
+			width: 100%;
+			height: 10%;
+			background-color: green;
+			top: 89%;
+		}
+
+		.sidewalk {
+			position: absolute;
+			width: 100%;
+			height: 8%;
+			background-color: #ff8000;
+			top: 81%;
+			z-index: 6;
+		}
+
+		.road_stripe_one {
+			position: absolute;
+			height: 2%;
+			width: 8%;
+			background-color: white;
+			top: 58%;
+			left: 20%;
+			z-index: 7;
+		}
+
+		.road_stripe_two {
+			position: absolute;
+			height: 2%;
+			width: 8%;
+			background-color: white;
+			top: 58%;
+			left: 50%;
+			z-index: 7;
+		}
+
+		.road_stripe_three {
+			position: absolute;
+			height: 2%;
+			width: 8%;
+			background-color: white;
+			top: 58%;
+			left: 75%;
+			z-index: 7;
+		}
+
+	</style>
+
+</head>
+<body>
+	<h1>Pimp My Ride</h1>
+	<div class="sky"></div>
+	<div class="tires one"></div>
+	<div class="tires two"></div>
+	<div class="hubcap_one"></div>
+	<div class="hubcap_two"></div>
+	<div class="car_body"></div>
+	<div class="car_top"></div>
+	<div class="car_nose"></div>
+	<div class="windows_one"></div>
+	<div class="windows_two"></div>
+	<div class="windows_three"></div>
+	<div id="hood_ornament"></div>
+	<div class="street"></div>
+	<div class="grass_one"></div>
+	<div class="grass_two"></div>
+	<div class="sidewalk"></div>
+	<div class="road_stripe_one"></div>
+	<div class="road_stripe_two"></div>
+	<div class="road_stripe_three"></div>
+</body>
+</html>
