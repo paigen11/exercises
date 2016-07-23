@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function Player(name, position, avgMinutesPlayed, avgPoints, avgRebounds, starter){
+   this.name = name;
+   this.position = position;
+   this.avgMinutesPlayed = avgMinutesPlayed;
+   this.avgPoints = avgPoints;
+   this.avgRebounds = avgRebounds;
+   this.starter = starter;
+}
+
+var players = [];
+players.push(new Player('Paul Millsap', 'PF', 36, 16.4, 9.4, true));
+players.push(new Player('Jeff Teague', 'PG', 28.6, 15.6, 1.9, true));
+
+var players = [
+ {
+   name: 'Paul Millsap',
+   position: 'PF',
+   avgMinutesPlayed: 36,
+   avgPoints: 16.4,
+   avgRebounds: 9.4,
+   starter: true
+ },
+ {
+   name: 'Jeff Teague',
+   position: 'PG',
+   avgMinutesPlayed: 28.6,
+   avgPoints: 15.6,
+   avgRebounds: 1.9,
+   starter: true
+ },
+ {
+   name: 'Al Horford',
+   position: 'C',
+   avgMinutesPlayed: 32,
+   avgPoints: 13.2,
+   avgRebounds: 6.8,
+   starter: true
+ },
+ {
+   name: 'Kent Bazemore',
+   position: 'SF',
+   avgMinutesPlayed: 31.8,
+   avgPoints: 12,
+   avgRebounds: 6.6,
+   starter: true
+ },
+ {
+   name: 'Kyle Korver',
+   position: 'SG',
+   avgMinutesPlayed: 32.4,
+   avgPoints: 11.2,
+   avgRebounds: 4.9,
+   starter: true
+ },
+ {
+   name: 'Dennis Schroder',
+   position: 'PG',
+   avgMinutesPlayed: 18.3,
+   avgPoints: 10.7,
+   avgRebounds: 1.8,
+   starter: false
+ },
+ {
+   name: 'Kris Humphries',
+   position: 'PF',
+   avgMinutesPlayed: 14.7,
+   avgPoints: 9.7,
+   avgRebounds: 5.7,
+   starter: false
+ },
+ {
+   name: 'Mike Scott',
+   position: 'PF',
+   avgMinutesPlayed: 17.6,
+   avgPoints: 7.0,
+   avgRebounds: 3.6,
+   starter: false
+ },
+ {
+   name: 'Thabo Sefolosha',
+   position: 'SF',
+   avgMinutesPlayed: 18.9,
+   avgPoints: 4.8,
+   avgRebounds: 3.9,
+   starter: false
+ },
+ {
+   name: 'Mike Muscala',
+   position: 'PF',
+   avgMinutesPlayed: 7.4,
+   avgPoints: 2.7,
+   avgRebounds: 1.9,
+   starter: false
+ },
+ {
+   name: 'Tim Hardaway Jr.',
+   position: 'SG',
+   avgMinutesPlayed: 9.7,
+   avgPoints: 2.2,
+   avgRebounds: 1.0,
+   starter: false
+ },
+ {
+   name: 'Lamar Patterson',
+   position: 'SG',
+   avgMinutesPlayed: 5.0,
+   avgPoints: 1.5,
+   avgRebounds: 1.3,
+   starter: false
+ },
+ {
+   name: 'Kirk Hinrich',
+   position: 'SG',
+   avgMinutesPlayed: 4.5,
+   avgPoints: 0.8,
+   avgRebounds: 0.7,
+   starter: false
+ }
+];
+</script>
+
+
+<!-- * Print the average playing time of the players.
+
+   var avgOfAvgMinutes = 0;
+   for(i=0; i<players.length; i++){
+    avgOfAvgMinutes += players[i].avgMinutesPlayed;
+    console.log(players[i].avgMinutesPlayed);
+   }
+   avgOfAvgMinutes/players.length;
+
+* Print the average playing time of the starters.
+
+   //incorrect 
+   var avgOfStarters = 0;
+   if(players[i].starter == "true"){
+       for(var i = 0; i <players.length; i++){
+          avgOfStarters += players[i].avgMinutesPlayed;
+          console.log((players[i].avgMinutesPlayed));
+          }
+       }
+      avgOfStarters/players.length; 
+
+//inclass
+
+    var avgOfStarters = 0;
+    var starterPlayers = 0;
+    for(var i = 0; i < players.length; i++){
+      if players[i].starter === true){
+         starterPlayers++;
+         avgOfStarters += players[i].avgMinutesPlayed;
+      }
+    } 
+    console.log(avgOfStarters/starterPlayers); 
+      
+
+* Print the average playing time of the bench players.
+   //incorrect
+   var avgOfBench = 0;
+   if(players[i].starter === "false"){
+      for(var i = 0; i < players.length; i++){
+         avgOfBench += players[i].avgMinutesPlayed;
+         console.log((players[i].avgMinutesPlayed))
+      }
+   }
+
+   //inclass
+      var benchAverageMinutes = 0;
+      var counter = 0;
+      for(var i = 0; i < players.length; i++){
+         if(players[i].starter === false){
+            counter++;
+            benchAverageMinutes += players[i].avgMinutesPlayed;
+         }
+      }
+   console.log(benchAverageMinutes/counter);
+
+* Create an array of the names of each player.
+
+   var names = [];
+      for(var i = 0; i < players.length; i++){
+         playerNames.push(players[i].name);
+      }
+
+* Create an array of the names of the players who average more than 10 points per game.
+   
+   //incorrect
+   for(var i = 0; i < players.length; i++){
+      if(players[i].avgPoints > 10){
+         console.log(players[i].name);
+      }
+   }
+
+   var names = [];
+      for(var i = 0; i < players.length; i++){
+         if(players[i].avgPoints > 10){
+            playerNames.push(players[i].name);
+         }
+      }
+
+* Create an array of the names of the players who average more than 5 rebounds per game.
+   
+   //incorrect
+   for(var i = 0; i < players.length; i++){
+      if(players[i].avgRebounds > 5){
+         console.log(players[i].name);
+      }
+   }
+
+    for(var i = 0; i < players.length; i++){
+      if(players[i].avgRebounds > 5){
+         playerNames.push(players[i].name);
+      }
+   }
+
+* Who is the player with the most points per minute played? Write a program to find that out.
+
+   var highPPM = 0;
+   var highPPMName = '';
+   for(var i = 0; i < players.length; i++){
+      players[i].ppm = players[i].avgPoints/players[i].avgMinutesPlayed;
+      if(players[i].ppm > highPPM){
+         highPPM = players[i].ppm;
+         highPPMName= players[i].name;
+      }
+   }
+
+   or pass Math.max a new array of ppm numbers
+
+* Based on this data, what is the average points score for the team as a whole? -->
+
+</body>
+</html>
