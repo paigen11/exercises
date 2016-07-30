@@ -155,7 +155,7 @@ var players = [
     var avgOfStarters = 0;
     var starterPlayers = 0;
     for(var i = 0; i < players.length; i++){
-      if players[i].starter === true){
+      if (players[i].starter === true){
          starterPlayers++;
          avgOfStarters += players[i].avgMinutesPlayed;
       }
@@ -188,7 +188,7 @@ var players = [
 
    var names = [];
       for(var i = 0; i < players.length; i++){
-         playerNames.push(players[i].name);
+         names.push(players[i].name);
       }
 
 * Create an array of the names of the players who average more than 10 points per game.

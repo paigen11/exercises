@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Career Builder Job Search Form</title>
+
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+	<form class="sign-up-form">
+		<h1>New Users: Sign up now</h1>
+		
+		<div class="section">
+			<h2>CareerBuilder Registration</h2>
+		</div>	
+
+		<!-- initial wrapper to select how user will use CareerBuilder -->
+		<div class="formWrapper">
+			<p>I will be using CareerBuilder.com as:</p>
+			<div class="buttons">
+				<div class="status">
+					<input type="radio" name="a">
+					<p>a Job Seeker</p>
+				</div>
+				<div class="status">
+					<input type="radio" name="a"> 
+					<p>an Employer</p>
+				</div>	
+				<div class="status">	
+					<input type="radio" name="a">
+					<p>a Staffing Agency Representative</p>
+				</div>	
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>Account Information</h2>
+		</div>
+		
+		<!-- wrapper for all the user's account info -->
+		<div class="form-wrapper">
+			<div class="firstNameWrapper">
+				<label>Your first name:<input type="text" class="firstName name"> 
+				</label>
+				<div class="error error-name"></div>
+			</div> 
+
+			<div class="lastNameWrapper">
+				<label>Your last name:<input type="text" class="lastName name">
+				</label>
+				<div class="error error-name"></div>
+			</div>
+
+			<div class="emailAddressWrapper">
+				<label>Email Address:<input type="email" class="email">
+				</label>
+				<div class="error error-email"></div>
+			</div>
+
+			<div class="confirmEmailWrapper">
+				<label>Confirm Email Address:<input type="email" class="email-two">
+				</label>
+				<div class="error error-email-two"></div>
+			</div>
+
+			<div class="passwordWrapper">
+				<label>Create Password<input type="password" class="password">
+				</label>
+				<div class="password-hint"></div>
+				<div class="error error-password"></div>
+			</div>
+
+			<div class="confirmWrapper">
+				<label>Confirm Password:<input type="password" class="password-two">
+				</label>
+				<div class="error error-password-two"></div>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>Contact Information</h2>
+		</div>	
+
+		<!-- wrapper for contact info -->
+
+		<div class="form-wrapper">
+			<div class="phoneWrapper">
+				<label>Phone:<input type="text" class="phone">
+				</label>
+				<div class="error error-phone"></div>
+			</div>
+
+			<div class="addressWrapper">
+				<label>Address:<input type="text" class="address">
+				</label>
+				<div class="error error-address"></div>
+			</div>
+
+			<div class="addressWrapperTwo">
+				<label>Address 2:<input type="text" class="address-two">
+				</label>
+				<div class="error error-address-two"></div>
+			</div>
+
+			<div class="countryWrapper">
+				<label>Country:<input type="text" class="country">
+				</label>
+				<div class="error error-country"></div>
+			</div>
+
+			<div class="cityWrapper">
+				<label>City:<input type="text" class="city">
+				</label>
+				<div class="error error-city"></div>
+			</div>	
+
+			<div class="stateWrapper">
+				<label>State:<input type="text" class="state">
+				</label>
+				<div class="error error-state"></div>
+			</div>	
+
+			<div class="zipWrapper">
+				<label>Zip:<input type="text" class="zip">
+				</label>
+				<div class="error error-zip"></div>
+			</div>			
+		</div>
+
+		<div class="submit">
+			<input type="submit" class="submit" value="Register Now!">
+		</div>
+	</form>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body{
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	font-family: sans-serif;
+}
+
+h1{
+	font-size: 30px;
+	font-weight: bold;
+	color: #182642;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+h2{
+	font-size: 20px;
+	font-weight: bold;
+	color: #182642;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.status {
+	display: block;
+}
+
+.formWrapper .buttons p, .formWrapper .buttons input{
+	display: inline-block;
+	padding: 5px;
+}
+
+.firstNameWrapper, .lastNameWrapper, .emailAddressWrapper, .confirmEmailWrapper, .passwordWrapper, .confirmWrapper, .formWrapper, .addressWrapper, .addressWrapperTwo, .countryWrapper, .cityWrapper, .stateWrapper, .zipWrapper{
+	padding-top: 10px;
+}
+
+.form-wrapper input{
+	display: block;
+	width: 40%;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.form-wrapper label{
+	margin-left: 15px;
+}
+
+.submit{
+	display: block;
+	margin: auto;
+}
+
+.submit input{
+	font-size: 18px;
+	background-color: #85ce3f;
+	color: #fff;
+	padding: 10px 15px;
+}
